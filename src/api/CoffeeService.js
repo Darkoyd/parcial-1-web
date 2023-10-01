@@ -1,9 +1,9 @@
 import { client } from './AxiosClient.js'
 
-export const getAll = () => {
-    return client.get('/cafes')
+export const getAll = async () => {
+    return await client.get('/cafes')
 }
 
-export const getById = (id) => {
-    return client.get(`/cafes/${id}`)
+export const getById = async (id) => {
+    return await client.get(`/cafes/${id}`)
 }

@@ -1,3 +1,16 @@
 {
-    "test": "test"
+    "logIn": "Log In",
+    "username": "Username",
+    "pass": "Password",
+    "enter": "Enter",
+    "cancel": "Cancel",
+    "authError": "Authentication error. Check your credentials.",
+    "name": "Name",
+    "type": "Type",
+    "region": "Region",
+    "notes": "Notes",
+    "nd": "No date",
+    "grownAt": "Grown at ",
+    "seaLevel": " metres above sea level",
+    "translate": "Translate"
 }

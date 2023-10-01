@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { login } from "../api/AuthService"
 import { useNavigate } from "react-router-dom"
+import { FormattedMessage } from "react-intl"
 
 const Login = () => {
     const [user, setUser] = useState('')
@@ -38,28 +39,31 @@ const Login = () => {
     }
 
     return (
-        <div className="flex flex-col">
-            <div>
-                Inicio de sesión
+        <div className="flex flex-col align-middle content-center self-center w-2/3">
+            <div className="font-bold pb-2">
+                <FormattedMessage id='logIn' />
             </div>
-            <div className="flex flex-col">
-                <form>
-                    <label>
-                        Nombre de usuario
+            <div className="flex flex-col border-2 bg-[#e0bbbb] bg-opacity-20 grow">
+                <form className="self-center flex flex-col">
+                    <label className='py-2 font-bold'>
+                        <FormattedMessage id='username' />
                     </label>
-                    <br />
-                    <input type="text" placeholder='' value={user} onChange={handleUserFormChange} />
-                    <br />
-                    <label>
-                        Contraseña
+
+                    <input className='py-2' type="text" placeholder='' value={user} onChange={handleUserFormChange} />
+
+                    <label className='pt-5 font-bold'>
+                        <FormattedMessage id='pass' />
                     </label>
-                    <br />
-                    <input type="password" pĺaceholder='' value={pass} onChange={handlePassFormChange} />
-                    <br />
-                    <div className="flex flex-row gap-4">
-                        <button onClick={handleSubmitClick} className="bg-green-600 text-white p-2">Ingresar</button>
-                        <button onClick={handleCancelClick} className="bg-red-600 text-white p-2">Cancelar</button>
+
+                    <input className='py-2' type="password" pĺaceholder='' value={pass} onChange={handlePassFormChange} />
+
+                    <div className="flex flex-row gap-4 align-middle place-content-center py-2">
+                        <button onClick={handleSubmitClick} className="bg-green-600 text-white py-2 px-6 hover:cursor-pointer"><FormattedMessage id='enter' /></button>
+                        <button onClick={handleCancelClick} className="bg-red-600 text-white py-2 px-6 hover:cursor-pointer"><FormattedMessage id='cancel' /></button>
                     </div>
+                    {error && (<div className="text-red-600 font-bold">
+                        <FormattedMessage id='authError' />
+                    </div>)}
                 </form>
 
             </div>

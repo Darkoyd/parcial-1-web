@@ -1,3 +1,16 @@
 {
-    "test": "prueba"
+    "logIn": "Inicio de sesión",
+    "username": "Nombre de usuario",
+    "pass": "Contraseña",
+    "enter": "Ingresar",
+    "cancel": "Cancelar",
+    "authError": "Error de autenticación. Revise sus credenciales.",
+    "name": "Nombre",
+    "type": "Tipo",
+    "region": "Región",
+    "notes": "Notas",
+    "nd": "Sin Fecha",
+    "grownAt": "Cultivado a ",
+    "seaLevel": " msnm",
+    "translate": "Traducir"
 }
